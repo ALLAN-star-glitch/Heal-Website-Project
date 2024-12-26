@@ -1,1 +1,168 @@
-/* You can add global styles to this file, and also import other style files */
+ // Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+
+@use '@angular/material' as mat;
+@import "bootstrap/scss/bootstrap";
+
+// Define your custom colors
+$md-primary: (
+    50: #f5e7fb,
+    100: #e2b9f4,
+    200: #d08bee,
+    300: #bd5ce7,
+    400: #ae3ee3,
+    500: #9f20df, // Vibrant purple
+    600: #911cc9,
+    700: #8017ae,
+    800: #701193,
+    900: #550d70,
+    A100: #e6b4ff,
+    A200: #cd8aff,
+    A400: #b35eff,
+    A700: #a346ff,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #ffffff,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #ffffff,
+    )
+);
+
+$md-accent: (
+    50: #fbeff4,
+    100: #f4cfe2,
+    200: #edaecd,
+    300: #e58eb9,
+    400: #df74a9,
+    500: #d95b99, // Pinkish accent
+    600: #c3538a,
+    700: #a54875,
+    800: #873e61,
+    900: #652e49,
+    A100: #ffb5d2,
+    A200: #ff8ab8,
+    A400: #ff5e9e,
+    A700: #ff4790,
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #ffffff,
+        400: #ffffff,
+        500: #ffffff,
+        600: #ffffff,
+        700: #ffffff,
+        800: #ffffff,
+        900: #ffffff,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #000000,
+    )
+);
+
+// Define your custom warn palette
+$md-warn: (
+  50: #ffebee,
+  100: #ffcccb,
+  200: #ff8a80,
+  300: #ff5252,
+  400: #ff1744,
+  500: #d50000, // Default warn red
+  600: #c51162,
+  700: #b2102f,
+  800: #9c0e2e,
+  900: #8b0000,
+  A100: #ff8a80,
+  A200: #ff5252,
+  A400: #ff1744,
+  A700: #d50000,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #ffffff,
+  )
+);
+
+// Define your custom background palette
+$md-background: (
+  50: #f3f4f6,
+  100: #e0e3e8,
+  200: #c0c7d3,
+  300: #a1aabc,
+  400: #828ba5,
+  500: #637194, // Custom neutral background color
+  600: #4f5f80,
+  700: #3b4b6a,
+  800: #29394e,
+  900: #1a2b3c,
+  A100: #b0c1d1,
+  A200: #97afc0,
+  A400: #7e9db0,
+  A700: #668ba0,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #ffffff,
+  )
+);
+
+// Define the theme with your custom colors
+$my-primary: mat.m2-define-palette($md-primary);
+$my-accent: mat.m2-define-palette($md-accent);
+$my-warn: mat.m2-define-palette($md-warn); // Retain the default warn
+$my-background: mat.m2-define-palette($md-background);
+$my-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $my-primary,
+    accent: $my-accent,
+    warn: $my-warn,
+    background: $my-background,
+  ),
+));
+
+// Include the custom theme
+@include mat.all-component-themes($my-theme);
+
+// Apply global styles
+html, body { 
+  height: 100%; 
+  margin: 0;
+  font-family: 'Roboto', 'Helvetica Neue', sans-serif; 
+}
+
+body {
+  background-color: #f9f5fc; // Light purple background
+}

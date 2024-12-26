@@ -1,0 +1,27 @@
+.top-header {
+    background-color: #9f20df; // Primary color
+    color: #ffffff; // Contrast color
+    font-size: 0.875rem;
+  
+    .contact-info {
+      font-weight: 500;
+    }
+  
+    .social-link {
+      color: #ffffff; // Contrast color
+      text-decoration: none;
+  
+      mat-icon {
+        font-size: 1.2rem;
+      }
+  
+      &:hover {
+        color: #d08bee; // Light primary accent
+      }
+    }
+  
+    mat-icon {
+      vertical-align: middle;
+    }
+  }
+  

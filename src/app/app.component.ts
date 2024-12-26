@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { TopHeaderComponent } from './top-header/top-header.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [RouterOutlet, TopHeaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
