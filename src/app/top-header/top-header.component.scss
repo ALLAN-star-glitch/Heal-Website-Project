@@ -1,27 +1,37 @@
 .top-header {
-    background-color: #9f20df; // Primary color
-    color: #ffffff; // Contrast color
-    font-size: 0.875rem;
-  
-    .contact-info {
-      font-weight: 500;
-    }
-  
-    .social-link {
-      color: #ffffff; // Contrast color
-      text-decoration: none;
-  
-      mat-icon {
-        font-size: 1.2rem;
-      }
-  
-      &:hover {
-        color: #d08bee; // Light primary accent
-      }
-    }
-  
-    mat-icon {
-      vertical-align: middle;
-    }
+  background-color: #bd5ce7; // Primary color, can be changed to your preference
+  color: #fff;
+  .left-section,
+  .right-section {
+    display: flex;
+    align-items: center;
   }
   
+  .left-section {
+    font-size: 14px;
+    .contact-info {
+      margin-right: 20px; // Space between icons and text
+    }
+    
+    mat-icon {
+      font-size: 20px; // Size of the icons in the left section
+      color: #fff; // Set icon color
+    }
+  }
+
+  .right-section {
+    margin-left: auto; // Pushes the right section to the far right
+    .social-link {
+      color: #fff;
+      margin-right: 15px; // Space between social media icons
+      mat-icon {
+        font-size: 20px; // Social icon size
+        transition: color 0.3s ease;
+      }
+      
+      &:hover mat-icon {
+        color: #f1f1f1; // Change icon color on hover
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+.hero {
+  position: relative;
+  background-color: #f4f4f9;
+  background-image: url('/assets/hero.webp');
+  background-size: cover;
+  background-position: center;
+  padding: 80px 0;
+  height: 500px;  // Adjust the height of the hero section
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+  // Gradient overlay (left purple, right transparent)
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(159, 32, 223, 0.9), rgba(0, 0, 0, 0));  // Gradient from purple to transparent
+    z-index: 1;
+  }
+
+  // Ensure the text content stays above the overlay
+  .container {
+    position: relative;
+    z-index: 2;  // Position content above the overlay
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffffff;  // White text to contrast with the overlay
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: #ffffff;  // White text for subtitle
+    margin: 20px 0;
+  }
+
+  .cta-button {
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    background-color: #d95b99;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+
+    &:hover {
+      background-color: #ae3ee3;
+    }
+  }
+
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  // Mobile responsiveness
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+  }
+}

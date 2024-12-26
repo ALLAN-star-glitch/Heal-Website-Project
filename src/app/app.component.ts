@@ -1,14 +1,23 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { TopHeaderComponent } from './top-header/top-header.component';
+import { RouterModule } from '@angular/router';
+import { MainHeaderComponent } from './main-header/main-header.component';
+import { TopHeaderComponent } from "./top-header/top-header.component";
 
 @Component({
   selector: 'app-root',
+  imports: [RouterModule, MainHeaderComponent, TopHeaderComponent],
+  template: `
+    <main>
+      <app-top-header/>
+      <app-main-header></app-main-header> <!-- Include MainHeaderComponent -->
+      <section class="content">
+        <router-outlet></router-outlet>
+      </section>
+    </main>
+  `,
+  styleUrls: ['./app.component.scss'],
   standalone: true,
-  imports: [RouterOutlet, TopHeaderComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'healproject';
+  title = 'HEAL Project';
 }
