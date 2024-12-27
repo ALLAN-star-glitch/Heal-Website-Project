@@ -1,20 +1,53 @@
 <!-- home.component.html -->
+
+<!-- Hero Section -->
 <section class="hero d-flex align-items-center" style="background-color: #f4f4f9; padding: 80px 0;">
-    <div class="container">
-      <div class="row justify-content-between align-items-center">
-        <!-- Hero Text Content -->
-        <div class="col-md-6 text-center text-md-start">
-          <h1 class="hero-title">Welcome to Heal</h1>
-          <p class="hero-subtitle mb-4">
-            Discover the best counselors and mental health services at Heal. Join today and start your journey to better mental health.
-          </p>
-          <button mat-raised-button color="accent" [routerLink]="['/pricing']" class="cta-button btn accent-btn">
-            Get Started
-          </button>
-      
-        </div>
-        
+  <div class="container">
+    <div class="row justify-content-between align-items-center">
+      <!-- Hero Text Content -->
+      <div class="col-md-6 text-center text-md-start">
+        <h1 class="hero-title">Welcome to Heal</h1>
+        <p class="hero-subtitle mb-4">
+          Discover the best counselors and mental health services at Heal. Join today and start your journey to better mental health.
+        </p>
+        <button mat-raised-button color="accent" [routerLink]="['/pricing']" class="cta-button btn accent-btn">
+          Get Started
+        </button>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
+
+<!-- Who We Are Section with Two Columns -->
+<section id="heart-behind-heal" class="py-5">
+  <div class="container">
+    <mat-card class="mat-elevation-z4 overlap-card">
+      <div class="row align-items-center">
+        <!-- Left Column -->
+        <div class="col-md-6 text-center text-md-start">
+          <mat-card-title class="mb-3">The Heart Behind Heal</mat-card-title>
+          <mat-card-content>
+            <p>At Heal, we are dedicated professionals committed to mental health and wellness. Our mission is to connect individuals with caring counselors in a safe and supportive space.</p>
+            <button mat-raised-button color="accent" class="btn accent-btn">Learn More</button>
+          </mat-card-content>
+        </div>
+
+        <!-- Right Column -->
+        <div class="col-md-6 text-center">
+          <img src="assets/healing_together.webp" alt="Healing Together" class="img-fluid rounded">
+          
+          <!-- Progress Bars Below Image -->
+          <ngb-progressbar class="mb-3 first-progressbar custom-progress" type="warning" [value]="75" [striped]="true" [animated]="true">
+            <i>Mental Health: 75%</i>
+          </ngb-progressbar>
+          <ngb-progressbar class="mb-3 custom-progress" type="info" [value]="60" [striped]="true" [animated]="true">
+            <i>Counselor Expertise: 60%</i>
+          </ngb-progressbar>
+          <ngb-progressbar class="mb-3 custom-progress" type="success" [value]="90" [striped]="true" [animated]="true">
+            <i>Customer Satisfaction: 90%</i>
+          </ngb-progressbar>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</section>

@@ -1,8 +1,12 @@
 .app-header {
   // Custom styles for the header using Angular Material and Bootstrap
-  
   padding: 40px;
+  
+  position: sticky; // Make the header sticky
+  top: 0; // Stick to the top of the page
+  z-index: 1000; // Ensure the header stays above other content while scrolling
 
+  
   .logo {
     font-size: 24px;
     font-weight: bold;
@@ -72,34 +76,9 @@
 
       &:hover {
         background-color: #ff4790;
+  
       }
     }
   }
 }
 
-// Media query for mobile devices
-@media (max-width: 768px) {
-  .app-header {
-    .navbar-toggler {
-      display: block;
-    }
-
-    .nav-links {
-      display: none;
-    }
-
-    .navbar-collapse {
-      display: block;
-      background-color: #701193;
-      color: #ffffff;
-
-      .nav-link {
-        color: #ffffff;
-
-        &:hover {
-          color: #d95b99;
-        }
-      }
-    }
-  }
-}
