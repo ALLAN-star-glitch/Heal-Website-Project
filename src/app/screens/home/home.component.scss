@@ -91,6 +91,7 @@
 
 /* Styling for Overlapping Card */
 .overlap-card {
+  position: relative; /* Ensure pseudo-element positions relative to this card */
   top: -150px; /* Adjust this value to overlap the hero section */
   left: 50%;
   transform: translateX(-50%);
@@ -98,19 +99,31 @@
   max-width: 1200px; /* Set max width of the card */
   padding: 20px;
   border-radius: 8px; /* Rounded corners */
-  background-color: #e2b9f4; /* Set the card's background color */
+  background-image: url('/assets/background2.webp'); /* Path to your image */
+  background-size: cover; /* Ensure the image covers the card completely */
+  background-position: bottom; 
   z-index: 10; /* Ensures the card appears above the hero section */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+  color: #fff; /* Adjust text color for contrast with the image */
 
-/* Custom styles for progress bars */
-.custom-progress {
-  max-width: 70%;  /* Adjust this value to reduce the width further */
-  margin: 0 auto;  /* Center the progress bars */
-}
+  /* Overlay */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(159, 32, 223, 0.8); /* Overlay color with transparency */
+    border-radius: 8px; /* Match the card's rounded corners */
+    z-index: 1; /* Ensure the overlay is above the background image */
+  }
 
-.first-progressbar{
-  margin-top: 5%;
+  /* Ensure content appears above the overlay */
+  * {
+    position: relative;
+    z-index: 2;
+  }
 }
 
 
@@ -135,3 +148,103 @@
 
 
 
+.modal-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal-content {
+  text-align: center;
+}
+
+/* Styling for the right column */
+.right-column {
+  background-image: url('/assets/healing_together.webp');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  min-height: 300px;
+  max-width: 48%;
+  border-radius: 15px; /* Adjust value as needed */
+  overflow: hidden; /* Ensures content stays within the rounded area */
+  position: relative; /* Keep position relative for overlay and image layering */
+}
+
+/* Overlay styling */
+.right-column .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 15px; /* Ensure overlay has rounded corners */
+ 
+}
+
+.overlay{
+  background-color: #9F20DF; /* Apply overlay color */
+  opacity: 0.5; /* Adjust opacity */
+}
+
+/* Video Image Styling */
+.video-image {
+  width: 50px; /* Set image width */
+  height: 50px; /* Set image height */
+  cursor: pointer; /* Indicates interactivity */
+  transition: transform 0.3s ease-in-out; /* Transition effect */
+  position: relative; /* Keep the image above the overlay */
+  
+  /* Pulsing animation */
+  animation: pulse 1.5s infinite ease-in-out; /* Apply the pulse animation */
+}
+
+/* Hover effect for image */
+.video-image:hover {
+  transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+/* Keyframes for pulsing animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1); /* Start at normal size */
+  }
+  50% {
+    transform: scale(1.2); /* Scale up slightly */
+  }
+  100% {
+    transform: scale(1); /* Return to original size */
+  }
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%; /* Set max width to make it responsive */
+  height: 0;
+  padding-bottom: 56.25%; /* Maintain a 16:9 aspect ratio */
+  margin: 0 auto; /* Center the video */
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 5px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.template, .modal-body{
+  background-color: #9F20DF;
+  border-radius: 5px;
+}
