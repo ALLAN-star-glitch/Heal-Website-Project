@@ -21,4 +21,9 @@ import { RouterModule } from '@angular/router';  // Import RouterModule
 })
 export class MainHeaderComponent {
   // Any necessary component logic can go here
+
+  toggleNavbar() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    navbarToggler?.classList.toggle('active');
+  }
 }
