@@ -1,84 +1,72 @@
 .app-header {
-  // Custom styles for the header using Angular Material and Bootstrap
-  padding: 40px;
-  
-  position: sticky; // Make the header sticky
-  top: 0; // Stick to the top of the page
-  z-index: 1000; // Ensure the header stays above other content while scrolling
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 
-  
   .logo {
-    font-size: 24px;
-    font-weight: bold;
-    
+    font-size: 1.5rem;
+
     a {
       display: flex;
       align-items: center;
-      color: #ffffff; // Primary color from theme
+      color: #ffffff;
       text-decoration: none;
-      font-size: 1.8rem;
-      font-weight: 700;
 
       &:hover {
-        color: #d95b99; // Accent color on hover
+        color: #d95b99;
       }
 
-      // Logo Image
       img.logo-img {
-        height: 80px; // Adjust logo height as needed
-        width: auto;  // Maintain aspect ratio of logo
-        margin-right: 10px; // Space between logo image and text (if text exists)
+        height: 50px;
+        margin-right: 10px;
       }
     }
   }
 
-  .nav-links {
-    display: flex;
-    gap: 24px;
-
+  .navbar-nav {
     .nav-link {
       color: #ffffff;
-      text-decoration: none;
-      font-size: 16px;
+      font-size: 1rem;
       font-weight: 500;
 
       &:hover {
-        color: #d95b99; // Accent color on hover
+        color: #d95b99;
       }
     }
   }
 
   .cta-buttons {
-    display: flex;
-    gap: 16px;
-
     .btn {
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+      font-size: 0.9rem;
+      padding: 10px 15px;
     }
 
-    .primary-btn {
-      background-color: #9f20df; // Primary color
-      color: #ffffff;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 10px;
 
-      &:hover {
-        background-color: #ae3ee3;
+      .btn {
+        width: 100%;
       }
     }
+  }
 
-    .accent-btn {
-      background-color: #d95b99; // Accent color
-      color: #ffffff;
+  .navbar-toggler {
+    border: none;
 
-      &:hover {
-        background-color: #ff4790;
-  
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%2868, 68, 68, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .logo {
+      font-size: 1.2rem;
+
+      img.logo-img {
+        height: 40px;
       }
     }
   }
 }
-

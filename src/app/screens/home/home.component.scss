@@ -8,7 +8,8 @@
   height: 500px;  // Adjust the height of the hero section
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   z-index: 1;
-  position: relative;
+  overflow: hidden;
+
 
   // Gradient overlay (left purple, right transparent)
   &::before {
@@ -62,6 +63,7 @@
       font-size: 1rem;
     }
   }
+  
 }
 
 /* Section Styling */
@@ -76,6 +78,13 @@
   border-radius: 8px; /* Rounded corners */
 }
 
+/*Subtitle Styling*/
+#heart-behind-heal .who-we-are-card-subtitle{
+  font-size: 1rem;
+  font-weight: lighter;
+  color: beige;
+
+}
 /* Title Styling */
 #heart-behind-heal .mat-card-title {
   font-size: 2rem;
