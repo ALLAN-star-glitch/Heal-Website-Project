@@ -1,70 +1,52 @@
-<mat-toolbar color="primary" class="app-header">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <!-- Logo -->
-      <div class="logo">
-        <a [routerLink]="['/']" class="logo-link">
-          <img src="assets/logo.png" alt="Your Logo" class="logo-img" />
-          Heal
-        </a>
+    <!-- Logo -->
+    <a class="navbar-brand d-flex align-items-center" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      <img src="assets/logo.png" alt="Your Logo" class="logo-img me-2" />
+      Heal
+    </a>
+
+    <!-- Toggler for Small Screens -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible Navigation -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/how-it-works']" routerLinkActive="active">How It Works</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/for-counselors']" routerLinkActive="active">For Counselors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/for-clients']" routerLinkActive="active">For Clients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/pricing']" routerLinkActive="active">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/support']" routerLinkActive="active">Support</a>
+        </li>
+      </ul>
+
+      <!-- Call-to-Action Buttons -->
+      <div class="d-flex">
+        <button class="btn btn-accent me-2">Join as a Counselor</button>
+        <button class="btn btn-primary">Find a Counselor</button>
       </div>
-
-      <!-- Navbar Toggler -->
-      <button
-        class="navbar-toggler"
-        type="button"
-        [attr.data-bs-toggle]="'collapse'"
-        [attr.data-bs-target]="'#navbarNav'"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navigation Links and Buttons -->
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a [routerLink]="['/']" routerLinkActive="active" class="nav-link">Home</a>
-          </li>
-          <li class="nav-item">
-            <a [routerLink]="['/how-it-works']" routerLinkActive="active" class="nav-link">How It Works</a>
-          </li>
-          <li class="nav-item">
-            <a
-              [routerLink]="['/for-counselors']"
-              routerLinkActive="active"
-              class="nav-link"
-              >For Counselors</a
-            >
-          </li>
-          <li class="nav-item">
-            <a
-              [routerLink]="['/for-clients']"
-              routerLinkActive="active"
-              class="nav-link"
-              >For Clients</a
-            >
-          </li>
-          <li class="nav-item">
-            <a [routerLink]="['/pricing']" routerLinkActive="active" class="nav-link">Pricing</a>
-          </li>
-          <li class="nav-item">
-            <a [routerLink]="['/support']" routerLinkActive="active" class="nav-link">Support</a>
-          </li>
-        </ul>
-
-        <!-- Call-to-Action Buttons -->
-        <div class="cta-buttons d-lg-flex d-grid gap-2 mt-3 mt-lg-0">
-          <button mat-raised-button color="accent" class="btn accent-btn">
-            Join as a Counselor
-          </button>
-          <button mat-raised-button color="primary" class="btn primary-btn">
-            Find a Counselor
-          </button>
-        </div>
-      </div>
-    </nav>
+    </div>
   </div>
-</mat-toolbar>
+</nav>
