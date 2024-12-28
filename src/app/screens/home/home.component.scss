@@ -215,16 +215,19 @@
   transform: scale(1.1); /* Slightly enlarge image on hover */
 }
 
-/* Keyframes for pulsing animation */
+// Define the pulse animation
 @keyframes pulse {
   0% {
-    transform: scale(1); /* Start at normal size */
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(217, 91, 153, 0.8);
   }
   50% {
-    transform: scale(1.2); /* Scale up slightly */
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 10px rgba(217, 91, 153, 0);
   }
   100% {
-    transform: scale(1); /* Return to original size */
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(217, 91, 153, 0);
   }
 }
 
@@ -264,3 +267,105 @@
     display: none;
   }
 }
+
+#mobile-heart-behind-heal {
+  padding: 40px 20px;
+  background-color: #D08BEE;
+  margin-top: -25%;
+
+  .mobile-who-we-are {
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 16px;
+    background-image: url('/assets/background2.webp');
+    background-size: cover;
+    background-position: bottom;
+    z-index: 10;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #9F20DF;
+      opacity: 0.8;
+      border-radius: 5px;
+      z-index: 1;
+    }
+
+    .mobile-title,
+    .mobile-subtitle,
+    .mobile-content,
+    .accent-btn {
+      position: relative;
+      z-index: 2;
+    }
+
+    .mobile-title {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .mobile-subtitle {
+      font-size: 1rem;
+      color: #d95b99;
+      font-weight: lighter;
+      margin-bottom: 20px;
+    }
+
+    .mobile-content {
+      font-size: 1rem;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+
+    .accent-btn {
+      background-color: #d95b99;
+      color: #ffffff;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ae3ee3;
+        color: #ffffff;
+      }
+    }
+
+    // Pulse animation for the video image
+    .mobile-video-image {
+      position: relative; // Ensure it's above the overlay
+      z-index: 3; // Place above the overlay
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      animation: pulse 2s infinite; // Add animation here
+    }
+
+    // Define the pulse animation
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(217, 91, 153, 0.8);
+      }
+      50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px 10px rgba(217, 91, 153, 0);
+      }
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(217, 91, 153, 0);
+      }
+    }
+  }
+}
+
