@@ -61,7 +61,6 @@
   }
 
   .navbar-toggler {
-    
     &:focus,
     &:active {
       border: none !important; /* Remove any border when focused or clicked */
@@ -116,4 +115,24 @@
   .navbar-toggler.active .bar3 {
     transform: rotate(-45deg) translate(5px, -5px);
   }
+}
+
+/* Horizontal Collapse Styles */
+.navbar-collapse {
+  display: flex;
+  position: absolute; /* Position it outside the normal flow */
+  top: 0;
+  left: 100%; /* Initially position it off-screen */
+  width: 100%; /* Adjust to the width of the navbar */
+  background-color: #9f20df; /* Ensure it has the same background color as the navbar */
+  transition: transform 0.3s ease; /* Smooth transition for sliding */
+  z-index: 1050; /* Make sure it appears over other content */
+}
+
+.navbar-collapse.collapse {
+  transform: translateX(100%); /* Move off-screen to the right when collapsed */
+}
+
+.navbar-collapse.show {
+  transform: translateX(0); /* Slide in from the right when expanded */
 }
