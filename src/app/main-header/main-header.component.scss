@@ -65,6 +65,7 @@
     border: none; // Remove default border
     background-color: transparent; // Make background transparent
     padding: 0; // Remove extra padding
+    outline: none; // Remove any focus outline when clicked
 
     .navbar-toggler-icon {
       background-color: #ffffff; // Set the color of the hamburger icon to white
