@@ -257,3 +257,10 @@
   background-color: #9F20DF;
   border-radius: 5px;
 }
+
+/* Hide the "Who We Are" section on mobile devices and tablets */
+@media (max-width: 768px) {
+  #heart-behind-heal {
+    display: none;
+  }
+}
