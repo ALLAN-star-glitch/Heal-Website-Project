@@ -1,23 +1,16 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <!-- Logo -->
     <a class="navbar-brand d-flex align-items-center" [routerLink]="['/']">
       <img src="assets/logo.png" alt="Your Logo" class="logo-img me-2" />
       Heal
     </a>
 
-    <!-- Toggler for Small Screens -->
     <button
       class="navbar-toggler"
       type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNav"
-      aria-controls="navbarNav"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
       (click)="toggleNavbar()"
+      [class.active]="navbarOpen"
     >
-      <!-- Hamburger Bars -->
       <div class="hamburger-icon">
         <div class="bar bar1"></div>
         <div class="bar bar2"></div>
@@ -25,30 +18,28 @@
       </div>
     </button>
 
-    <!-- Collapsible Navigation -->
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" [ngClass]="{'show': navbarOpen}" id="navbarNav">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
-        <li class="nav-item">
+        <li class="nav-item" (click)="closeNavbar()">
           <a class="nav-link" [routerLink]="['/']" routerLinkActive="active">Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" (click)="closeNavbar()">
           <a class="nav-link" [routerLink]="['/how-it-works']" routerLinkActive="active">How It Works</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" (click)="closeNavbar()">
           <a class="nav-link" [routerLink]="['/for-counselors']" routerLinkActive="active">For Counselors</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" (click)="closeNavbar()">
           <a class="nav-link" [routerLink]="['/for-clients']" routerLinkActive="active">For Clients</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" (click)="closeNavbar()">
           <a class="nav-link" [routerLink]="['/pricing']" routerLinkActive="active">Pricing</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" (click)="closeNavbar()">
           <a class="nav-link" [routerLink]="['/support']" routerLinkActive="active">Support</a>
         </li>
       </ul>
 
-      <!-- Call-to-Action Buttons -->
       <div class="d-flex">
         <button class="btn btn-accent me-2">Join as a Counselor</button>
         <button class="btn btn-primary">Find a Counselor</button>
