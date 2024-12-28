@@ -60,6 +60,16 @@
     }
   }
 
+  .navbar-toggler {
+    
+    &:focus,
+    &:active {
+      border: none !important; /* Remove any border when focused or clicked */
+      outline: none !important; /* Remove outline */
+      box-shadow: none !important; /* Remove any box shadow */
+    }
+  }
+
   /* Styles for Hamburger Icon */
   .hamburger-icon {
     display: flex;
