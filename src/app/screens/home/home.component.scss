@@ -68,9 +68,9 @@
 
 /* Section Styling */
 #heart-behind-heal {
-  background-color: #d08bee; /* Light background for the section */
-  padding: 80px;
+  background: #f4f4f9
 }
+
 
 /* Card Styling */
 #heart-behind-heal .mat-card {
@@ -270,7 +270,7 @@
 
 #mobile-heart-behind-heal {
   padding: 40px 20px;
-  background-color: #D08BEE;
+  background-color: #f4f4f9;
   margin-top: -25%;
 
   .mobile-who-we-are {
@@ -368,4 +368,58 @@
     }
   }
 }
+
+.services-section {
+  background-color: #f4f4f9;
+}
+
+.sticky-container {
+  position: sticky;
+  top: 20px;  // Adjust this value as needed
+  z-index: 10;
+  align-self: flex-start;  // Ensures it aligns properly in flex layouts
+}
+
+.service-group {
+  padding: 1.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.service-group.active {
+  background-color: #eef3f7;
+  border-left: 4px solid #9F20DF;
+  padding-left: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: #343a40;
+}
+
+.media-wrapper {
+  margin-top: 9rem;  // Space between the image and the top of the column
+  img {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    width: 100%;  // Ensures responsive scaling
+    object-fit: cover;  // Optional, ensures consistent image dimensions
+  }
+}
+
+/* Mobile view adjustments */
+@media (max-width: 767px) {
+  /* Ensure the sticky image is hidden on mobile devices */
+  .sticky-container {
+    display: none;
+  }
+}
+
 

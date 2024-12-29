@@ -95,3 +95,61 @@
 </section>
 
 
+<!-- Services We Offer Section -->
+<section id="services-offered" class="services-section py-5">
+  <div class="container">
+    <div class="row">
+      <!-- Left Column: Services Descriptions -->
+      <div class="col-lg-6">
+        <!-- Service Group 1 -->
+        <div class="service-group mb-5" id="service1" [class.active]="currentSection === 'service1'">
+          <h3 class="service-heading">So you want counseling...</h3>
+          <p class="service-description">
+            At Heal, we connect you with professional counselors who specialize in:
+          </p>
+          <ul>
+            <li>Marriage and relationship counseling</li>
+            <li>Trauma recovery and mental health therapy</li>
+            <li>Group and peer support sessions</li>
+            <li>Teenage and young adult counseling</li>
+          </ul>
+        </div>
+
+        <!-- Service Group 2 -->
+        <div class="service-group mb-5" id="service2" [class.active]="currentSection === 'service2'">
+          <h3 class="service-heading">Or you want to find clients...</h3>
+          <p class="service-description">
+            Are you a counselor looking to grow your client base? Heal provides:
+          </p>
+          <ul>
+            <li>A platform to showcase your expertise</li>
+            <li>Client management tools</li>
+            <li>Opportunities to join community wellness programs</li>
+            <li>Access to online marketing resources</li>
+          </ul>
+        </div>
+
+        <!-- Service Group 3 -->
+        <div class="service-group mb-5" id="service3" [class.active]="currentSection === 'service3'">
+          <h3 class="service-heading">Need help with mental wellness programs?</h3>
+          <p class="service-description">
+            We also provide tailored solutions for organizations and schools:
+          </p>
+          <ul>
+            <li>Corporate mental health workshops</li>
+            <li>Customized wellness programs for institutions</li>
+            <li>Training for mental health first responders</li>
+            <li>Resource materials for ongoing support</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Column: Sticky Media (Only Visible on Larger Screens) -->
+      <div class="col-lg-6 d-none d-lg-block sticky-container">
+        <div class="media-wrapper text-center">
+          <img [src]="currentImage" alt="Dynamic Counseling Image" class="img-fluid rounded shadow" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
