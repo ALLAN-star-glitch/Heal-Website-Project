@@ -101,7 +101,7 @@
 /* Styling for Overlapping Card */
 .overlap-card {
   position: relative; /* Ensure pseudo-element positions relative to this card */
-  top: -150px; /* Adjust this value to overlap the hero section */
+  top: -90px; /* Adjust this value to overlap the hero section */
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
