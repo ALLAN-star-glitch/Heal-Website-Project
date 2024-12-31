@@ -101,9 +101,10 @@
     <div class="row">
       <!-- Left Column: Services Descriptions -->
       <div class="col-lg-6">
+        
         <!-- Service Group 1 -->
         <div class="service-group mb-5" id="service1" [class.active]="currentSection === 'service1'">
-          <h3 class="service-heading">So you want counseling...</h3>
+          <h1 class="service-heading">So you want counseling...</h1>
           <p class="service-description">
             At Heal, we connect you with professional counselors who specialize in:
           </p>
@@ -113,11 +114,60 @@
             <li>Group and peer support sessions</li>
             <li>Teenage and young adult counseling</li>
           </ul>
+
+          <!-- Step-by-Step Guide for Counseling -->
+          <div class="service-group mb-5" id="step-by-step-guide">
+            <h3 class="service-heading">Follow These Steps to Start Your Counseling Journey:</h3>
+            <div class="step-guide">
+              
+              <!-- Step 1 -->
+              <div class="step-item mb-4">
+                <h4 class="step-title">
+                  <i class="bi bi-check-circle-fill step-icon"></i> Step 1: Choose Your Counseling Area
+                </h4>
+                <p class="step-description">Select the type of counseling you need based on your current needs. Whether it's marriage counseling, trauma recovery, or mental health therapy, we are here to help.</p>
+                <!-- Downward Arrow Image -->
+                <div class="text-center mt-3">
+                  <img src="/assets/arrow-down.png" alt="Downward Arrow" class="img-fluid arrow-down" style="max-width: 50px; height: auto;">
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="step-item mb-4">
+                <h4 class="step-title">
+                  <i class="bi bi-check-circle-fill step-icon"></i> Step 2: Book Your First Session
+                </h4>
+                <p class="step-description">Pick a time that works best for you and schedule your first session with a counselor. We make it simple and convenient to book your session.</p>
+                <div class="text-center mt-3">
+                  <img src="/assets/arrow-down.png" alt="Downward Arrow" class="img-fluid arrow-down" style="max-width: 50px; height: auto;">
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="step-item mb-4">
+                <h4 class="step-title">
+                  <i class="bi bi-check-circle-fill step-icon"></i> Step 3: Attend Your Session
+                </h4>
+                <p class="step-description">Join your session, whether it's in-person or online, and begin your journey toward healing with our expert counselors.</p>
+                <div class="text-center mt-3">
+                  <img src="/assets/arrow-down.png" alt="Downward Arrow" class="img-fluid arrow-down" style="max-width: 50px; height: auto;">
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div class="step-item mb-4">
+                <h4 class="step-title">
+                  <i class="bi bi-check-circle-fill step-icon"></i> Step 4: Start Your Healing Journey
+                </h4>
+                <p class="step-description">After each session, you’ll have the tools and support to continue your healing journey and make progress toward mental well-being.</p>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <!-- Service Group 2 -->
+        <!-- Service Group 2: Counselor Client-Finding Timeline -->
         <div class="service-group mb-5" id="service2" [class.active]="currentSection === 'service2'">
-          <h3 class="service-heading">Or you want to find clients...</h3>
+          <h1 class="service-heading">Or you want to find clients...</h1>
           <p class="service-description">
             Are you a counselor looking to grow your client base? Heal provides:
           </p>
@@ -127,29 +177,82 @@
             <li>Opportunities to join community wellness programs</li>
             <li>Access to online marketing resources</li>
           </ul>
+
+          <!-- Timeline for Service Group 2 -->
+          <div class="step-guide">
+            
+            <!-- Step 1 -->
+            <div class="step-item mb-4">
+              <h4 class="step-title">
+                <i class="bi bi-check-circle-fill step-icon"></i> Step 1: Create Your Profile
+              </h4>
+              <p class="step-description">Set up your professional profile showcasing your counseling services and areas of expertise. This helps potential clients understand your strengths.</p>
+              <div class="text-center mt-3">
+                <img src="/assets/arrow-down.png" alt="Downward Arrow" class="img-fluid arrow-down" style="max-width: 50px; height: auto;">
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-item mb-4">
+              <h4 class="step-title">
+                <i class="bi bi-check-circle-fill step-icon"></i> Step 2: Set Availability
+              </h4>
+              <p class="step-description">Set your availability and schedule so clients can choose convenient times for sessions. Make it easy for clients to reach out.</p>
+              <div class="text-center mt-3">
+                <img src="/assets/arrow-down.png" alt="Downward Arrow" class="img-fluid arrow-down" style="max-width: 50px; height: auto;">
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-item mb-4">
+              <h4 class="step-title">
+                <i class="bi bi-check-circle-fill step-icon"></i> Step 3: Join Community Programs
+              </h4>
+              <p class="step-description">Participate in wellness community programs or events. Engage with clients who are looking for counseling support in group settings.</p>
+              <div class="text-center mt-3">
+                <img src="/assets/arrow-down.png" alt="Downward Arrow" class="img-fluid arrow-down" style="max-width: 50px; height: auto;">
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="step-item mb-4">
+              <h4 class="step-title">
+                <i class="bi bi-check-circle-fill step-icon"></i> Step 4: Promote Your Services
+              </h4>
+              <p class="step-description">Use Heal’s marketing resources to promote your services. Get noticed through online platforms, social media, and advertisements to attract more clients.</p>
+              <div class="text-center mt-3">
+                <img src="/assets/arrow-down.png" alt="Downward Arrow" class="img-fluid arrow-down" style="max-width: 50px; height: auto;">
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="step-item mb-4">
+              <h4 class="step-title">
+                <i class="bi bi-check-circle-fill step-icon"></i> Step 5: Manage Your Clients
+              </h4>
+              <p class="step-description">Track client interactions, schedule follow-ups, and manage sessions directly through Heal’s tools. Maintain effective communication with your clients.</p>
+            </div>
+          </div>
         </div>
 
-        <!-- Service Group 3 -->
-        <div class="service-group mb-5" id="service3" [class.active]="currentSection === 'service3'">
-          <h3 class="service-heading">Need help with mental wellness programs?</h3>
-          <p class="service-description">
-            We also provide tailored solutions for organizations and schools:
-          </p>
-          <ul>
-            <li>Corporate mental health workshops</li>
-            <li>Customized wellness programs for institutions</li>
-            <li>Training for mental health first responders</li>
-            <li>Resource materials for ongoing support</li>
-          </ul>
-        </div>
       </div>
 
-      <!-- Right Column: Sticky Media (Only Visible on Larger Screens) -->
-      <div class="col-lg-6 d-none d-lg-block sticky-container">
-        <div class="media-wrapper text-center">
-          <img [src]="currentImage" alt="Dynamic Counseling Image" class="img-fluid rounded shadow" />
+    <!-- Right Column: Sticky Media (Only Visible on Larger Screens) -->
+    <div class="col-lg-6 d-none d-lg-block sticky-container">
+      <div class="media-wrapper text-center">
+        <!-- Dynamic YouTube Video (Replaces Image with Video) -->
+        <div *ngIf="currentVideo" class="youtube-video">
+          <iframe 
+            [src]="getSanitizedVideoUrl(currentVideo)" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen 
+            class="img-fluid rounded shadow" 
+            style="max-width: 100%; height: 400px;">
+          </iframe>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </section>

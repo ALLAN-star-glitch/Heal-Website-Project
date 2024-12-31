@@ -266,10 +266,6 @@
   #heart-behind-heal {
     display: none;
   }
-
-  .overlap-card{
-    top: -40px;
-  }
 }
 
 #mobile-heart-behind-heal {
@@ -408,13 +404,16 @@ ul {
 }
 
 .media-wrapper {
-  margin-top: 9rem;  // Space between the image and the top of the column
-  img {
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-height: 400px;
-    width: 100%;  // Ensures responsive scaling
-    object-fit: cover;  // Optional, ensures consistent image dimensions
+  margin-top: 9rem; /* Space between the video and the top of the column */
+  position: sticky; /* Keeps the media content sticky on larger screens */
+  top: 2rem; /* Adjusts the sticky positioning */
+  text-align: center; /* Centers the iframe within the wrapper */
+
+  iframe {
+    border-radius: 10px; /* Rounds the corners of the video */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+    max-height: 400px; /* Restricts the video height */
+    width: 100%; /* Ensures the video scales responsively */
   }
 }
 
@@ -425,5 +424,32 @@ ul {
     display: none;
   }
 }
+
+.step-icon{
+  color:#ff4790;
+}
+
+/* Pulsating Animation */
+@keyframes pulse {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Applying the Pulsating Effect to the Arrow Image */
+.arrow-down {
+  animation: pulse 1.5s infinite;
+}
+
+
 
 
