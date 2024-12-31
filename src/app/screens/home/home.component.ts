@@ -64,4 +64,22 @@ export class HomeComponent {
   getSanitizedVideoUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
+
+  // Return the button label based on the current section
+  getButtonLabel(): string {
+    return this.currentSection === 'service1' 
+      ? 'Find a Counselor' 
+      : 'Join as a Counselor';
+  }
+
+  // Handle button click based on the current section
+  handleButtonClick() {
+    if (this.currentSection === 'service1') {
+      alert('Redirecting to Counseling Services...');
+      // Add navigation or action logic for "service1"
+    } else if (this.currentSection === 'service2') {
+      alert('Redirecting to Join as a Counselor...');
+      // Add navigation or action logic for "service2"
+    }
+  }
 }

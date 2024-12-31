@@ -160,6 +160,13 @@
                 <p class="step-description">After each session, you’ll have the tools and support to continue your healing journey.</p>
               </div>
             </div>
+
+            <!-- Button for Mobile -->
+          <div class="d-lg-none text-center mt-4">
+            <a href="/find-a-counselor" class="btn btn-accent">
+              Find a Counselor
+            </a>
+          </div>
         </div>
 
         <!-- Service Group 2: Counselor Client-Finding Timeline -->
@@ -230,7 +237,16 @@
               <p class="step-description">Track client interactions, schedule follow-ups, and manage sessions.</p>
             </div>
           </div>
+
+           <!-- Button for Mobile -->
+        <div class="d-lg-none text-center mt-4">
+          <a href="/join-as-a-counselor" class="btn btn-accent">
+            Join as a Counselor
+          </a>
         </div>
+        </div>
+
+       
 
       </div>
 
@@ -247,6 +263,14 @@
             class="img-fluid rounded shadow" 
             style="max-width: 100%; height: 400px;">
           </iframe>
+        </div>
+        <!-- Dynamic Button -->
+        <div class="text-center mt-3">
+          <button 
+            class="btn btn-accent" 
+            (click)="handleButtonClick()">
+            {{ getButtonLabel() }}
+          </button>
         </div>
       </div>
     </div>

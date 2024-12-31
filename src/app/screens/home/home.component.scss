@@ -386,9 +386,10 @@
 }
 
 .service-group.active {
-  background-color: #eef3f7;
+  background-color: #e2b9f4;
   border-left: 4px solid #9F20DF;
   padding-left: 1rem;
+  border-radius: 5px;
 }
 
 h3 {
@@ -450,6 +451,17 @@ ul {
   animation: pulse 1.5s infinite;
 }
 
+.btn-accent {
+  background-color: #d95b99;
+  color: #ffffff;
+  border: none; // Remove border
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add box-shadow
+
+  &:hover {
+    background-color: #ff4790;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); // Darker box-shadow on hover
+  }
+}
 
 
 
