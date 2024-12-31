@@ -13,10 +13,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; // Mo
 })
 export class HomeComponent {
   // Stores the currently visible section's ID (either 'service1' or 'service2')
-  currentSection: 'service1' | 'service2' = 'service2';
+  currentSection: 'service1' | 'service2' = 'service1';
 
   // Holds the URL of the currently displayed YouTube video
-  currentVideo = 'https://www.youtube.com/embed/NcCdoOkWPI0?si=A9g4Hegem-pa1sI2'; 
+  currentVideo = 'https://www.youtube.com/embed/NcCdoOkWPI0?si=A9g4Hegem-pa1sI2 '; 
 
   // A map linking each section to its respective YouTube video URL
   videos: Record<'service1' | 'service2', string> = {
