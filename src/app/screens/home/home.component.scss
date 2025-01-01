@@ -483,5 +483,13 @@ ul {
   animation: pulsate 1.5s infinite;
 }
 
+.custom-link {
+  font-size: 16px;
+  color: #d95b99;
+
+  &:hover {
+    color: #e54695;
+  }
+}
 
 
