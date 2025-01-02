@@ -8,7 +8,15 @@ footer {
     text-align: center;
     padding: 40px 0; /* Increased padding for more space */
     margin-top: auto; /* Pushes the footer to the bottom */
-  }
+
+/* Minimum height based on the viewport height */
+min-height: 15vh; /* At least 15% of the viewport height */
+
+@media (min-width: 992px) { /* For large devices and above */
+  padding: 60px 0; /* Increase padding */
+  min-height: 25vh; /* Increase minimum height for large screens */
+}
+}
   
   footer::after {
     content: "";
@@ -17,7 +25,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(159, 32, 223, 0.6); /* Overlay color */
+    background: rgba(159, 32, 223, 0.8); /* Overlay color */
     z-index: 1; /* Ensure overlay is above the image but below text */
   }
   
@@ -61,3 +69,14 @@ footer {
     color: white; /* Set the copyright text to white */
   }
   
+  .btn-accent {
+    background-color: #d95b99;
+    color: #ffffff;
+    border: none; // Remove border
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Add box-shadow
+
+    &:hover {
+      background-color: #ff4790;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); // Darker box-shadow on hover
+    }
+  }

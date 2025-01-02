@@ -1,0 +1,22 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+  
+  main.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  app-main-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+  }
+  
+  main.app-container .content {
+    flex: 1; /* Ensure content takes up remaining space */
+  }
+  

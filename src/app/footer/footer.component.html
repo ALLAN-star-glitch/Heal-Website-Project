@@ -1,36 +1,57 @@
-<footer>
-    <div class="container">
-      <div class="row">
-        <!-- Left Column: Footer Links -->
-        <div class="col-md-6">
-          <div class="footer-links">
-            <a href="/about-us" class="me-4">About Us</a>
-            <a href="/contact-us" class="me-4">Contact</a>
-            <a href="/privacy-policy" class="me-4">Privacy Policy</a>
-          </div>
-        </div>
-  
-        <!-- Right Column: Social Media Links -->
-        <div class="col-md-6">
-          <div class="social-links">
-            <a href="#" class="me-3">
-              <i class="bi bi-facebook"></i> <!-- Bootstrap Facebook Icon -->
-            </a>
-            <a href="#" class="me-3">
-              <i class="bi bi-twitter"></i> <!-- Bootstrap Twitter Icon -->
-            </a>
-            <a href="#" class="me-3">
-              <i class="bi bi-instagram"></i> <!-- Bootstrap Instagram Icon -->
-            </a>
-            <a href="#" class="me-3">
-              <i class="bi bi-linkedin"></i> <!-- Bootstrap LinkedIn Icon -->
-            </a>
-          </div>
+<footer class="py-4">
+  <div class="container">
+    <div class="row">
+      <!-- Column 1: Logo and Tagline -->
+      <div class="col-md-4 mb-4 text-center">
+        <img src="assets/logo.png" alt="HEAL Project Logo" class="img-fluid mb-2" style="max-height: 60px; width: 60px;">
+        <p class="small">Bridging the Gap in Mental Health Support</p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="col-md-4 mb-4">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled footer-links">
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/contact-us">Contact</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/faq">FAQs</a></li>
+          <li><a href="/services">Our Services</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Contact Information -->
+      <div class="col-md-4 mb-4">
+        <h5>Contact Us</h5>
+        <p class="small">
+          <i class="bi bi-envelope"></i> info&#64;healproject.com<br>
+          <i class="bi bi-telephone"></i> +1 234 567 890<br>
+          <i class="bi bi-geo-alt"></i> 123 Heal St., Wellness City, WP
+        </p>
+        <div class="social-links">
+          <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="me-3"><i class="bi bi-linkedin"></i></a>
         </div>
       </div>
-  
-      <!-- Copyright -->
-      <p>&copy; 2024 Heal Project | All rights reserved.</p>
     </div>
-  </footer>
-  
+
+    <!-- Newsletter Signup -->
+    <div class="row mt-4">
+      <div class="col-md-12 text-center">
+        <h5>Subscribe to Our Newsletter</h5>
+        <form class="d-flex justify-content-center mt-2">
+          <input type="email" class="form-control w-50 me-2" placeholder="Enter your email" />
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="row mt-4">
+      <div class="col text-center">
+        <p class="small">&copy; {{ currentYear }} HEAL Project | All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
