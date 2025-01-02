@@ -20,8 +20,8 @@ export class HomeComponent {
 
   // A map linking each section to its respective YouTube video URL
   videos: Record<'service1' | 'service2', string> = {
-    service1: 'https://www.youtube.com/embed/NcCdoOkWPI0?autoplay=1&mute=1&loop=1&playlist=NcCdoOkWPI0&si=A9g4Hegem-pa1sI2', // Video for service1
-    service2: 'https://www.youtube.com/embed/SmbIcdJ0Zx8?autoplay=1&mute=1&loop=1&playlist=SmbIcdJ0Zx8' // Video for service2
+    service1: 'https://www.youtube.com/embed/hyTF02CQq1k?autoplay=1&mute=1&loop=1&playlist=hyTF02CQq1k', // Video for service1
+    service2: 'https://www.youtube.com/embed/B6XBiNpqzbg?autoplay=1&mute=1&loop=1&playlist=B6XBiNpqzbg' // Video for service2
   };
 
   // Constructor to inject NgbModal for modals and DomSanitizer for URL sanitization
