@@ -72,6 +72,7 @@
 }
 
 
+
 /* Card Styling */
 #heart-behind-heal .mat-card {
   padding: 20px; /* Internal padding */
@@ -132,6 +133,22 @@
   * {
     position: relative;
     z-index: 2;
+  }
+}
+
+/* Adjustments for Tablet Devices */
+@media (max-width: 992px) {
+  .overlap-card {
+    top: -70px; /* Adjust this value for tablet devices */
+    padding: 15px; /* Optionally adjust padding for smaller screens */
+  }
+}
+
+/* Adjustments for Mobile Devices */
+@media (max-width: 576px) {
+  .overlap-card {
+    top: -50px; /* Adjust this value for mobile devices */
+    padding: 10px; /* Optionally adjust padding for smaller screens */
   }
 }
 
